@@ -1,14 +1,14 @@
 const lessons = {
-  0: [
-    {de: "der Jemen", ru: "-"},
-    {de: "der Sudan", ru: "-"},
-    {de: "die Schweiz", ru: "-"},
-    {de: "die Türkei", ru: "-"},
-    {de: "die USA (pl.)", ru: "Vereinigte Staaten von Amerika"},
-    {de: "da, hier", ru: "здесь (da hinten steht ein Auto)"},
+    0: [
+    {de: "der Jemen", ru: "Jemen"},
+    {de: "der Sudan", ru: "Súdán"},
+    {de: "die Schweiz", ru: "Švýcarsko"},
+    {de: "die Türkei", ru: "Turecko"},
+    {de: "die USA (pl.) - Vereinigte Staaten von Amerika", ru: "USA"},
+    {de: "da, hier - da hinten steht ein Auto", ru: "здесь"},
     {de: "dort", ru: "там"},
-    {de: "drinnen", ru: "внутри (da es regnet, bleiben wir drinnen)"},
-    {de: "hinten", ru: "сзади (da hinten steht ein Auto)"},
+    {de: "drinnen - da es regnet, bleiben wir drinnen", ru: "внутри"},
+    {de: "hinten - da hinten steht ein Auto", ru: "сзади"},
     {de: "die Stadt → die Städte", ru: "город"},
     {de: "das Land, die Länder", ru: "страна"},
     {de: "buchstabieren", ru: "hláskovat"},
