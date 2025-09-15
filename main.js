@@ -1,7 +1,5 @@
-let currentWord = null;
-let showGerman = true;
-let lastIndex = -1;
-let activeWords = []; // сюда загружаются слова в зависимости от выбора
+let shuffledWords = [];
+let currentIndex = 0;
 
 function selectLesson() {
   const select = document.getElementById("lessonSelect");
@@ -26,13 +24,13 @@ function newWord() {
     return;
   }
 
-  let randomIndex;
-  do {
-    randomIndex = Math.floor(Math.random() * activeWords.length);
-  } while (randomIndex === lastIndex);
+   // если слова кончились → новый круг
+   if (shuffledWords.length === 0 || currentIndex >= shuffledWords.length) {
+    prepareLessonWords();
+  }
 
-  lastIndex = randomIndex;
-  currentWord = activeWords[randomIndex];
+  currentWord = shuffledWords[currentIndex];
+  currentIndex++;
 
   // «шляпа» с вариантами
   const modes = ["ru", "ru", "ru", "ru", "ru", "ru", "ru", "ru", "ru", "de"];
