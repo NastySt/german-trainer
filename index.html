@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Немецкий словарь</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, Arial, sans-serif;
+        background: #f9fafb;
+      }
+  
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* центрируем */
+        text-align: center;
+      }
+  
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+  
+      #word {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+  
+      #translation {
+        font-size: 2.2rem;
+        color: #555;
+        margin: 20px 0;
+        display: none;
+      }
+  
+      select {
+        font-size: 1.3rem;
+        padding: 14px;
+        margin: 20px 0;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        width: 85%;
+        max-width: 400px;
+      }
+  
+      button {
+        font-size: 1.5rem;
+        padding: 20px 0;
+        margin: 14px 0;
+        border: none;
+        border-radius: 16px;
+        background: #4f46e5;
+        color: white;
+        cursor: pointer;
+        width: 85%;
+        max-width: 400px;
+        transition: background 0.2s ease;
+      }
+  
+      button:hover {
+        background: #4338ca;
+      }
+    </style>
+  </head>
+  
+<body>
+  <h1>Немецкий словарь</h1>
+
+  <div>
+    <label for="lessonSelect">Выбери лекцию: </label>
+    <select id="lessonSelect" onchange="selectLesson()">
+      <option value="all">Все лекции</option>
+      <option value="Nastyy">Лекция Nastyy</option>
+      <option value="1">Лекция 1</option>
+      <option value="EG 1 - Los geht's!">EG 1 - Los geht's!</option>
+      <option value="EG 3 - Alles in Ordnung">EG 3 - Alles in Ordnung</option>
+      <option value="3">Лекция 3</option>
+    </select>
+  </div>
+
+  <div id="word">Выбери лекцию и нажми "Новое слово"</div>
+  <div id="translation" style="display:none; font-size:1.2em; margin-top:15px; color:gray;"></div>
+
+  <button onclick="newWord()">Новое слово</button>
+  <button onclick="showAnswer()">Ответ</button>
+
+  <script src="words.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
